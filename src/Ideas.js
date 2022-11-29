@@ -1,10 +1,24 @@
-
 import React from 'react';
+import Card from './Card';
 import './Ideas.css';
 
-const Ideas = (props) => {
+const Ideas = ({ideas}) => {
+
+  const ideaCards = ideas.map(idea => {
+    return (
+      <Card
+        title={idea.title}
+        description={idea.description}
+        id={idea.id}
+        key={idea.id}
+      />
+    )
+  })
+
   return (
-    <h2>Hello, {[props.name, props.title]}!</h2>
+    <div className='ideas-container'>
+      {ideaCards}
+    </div>
   )
 }
 

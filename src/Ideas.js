@@ -2,9 +2,9 @@
 import React from 'react';
 import './Ideas.css';
 
-const Ideas = () => {
+const Ideas = (props) => {
   return (
-    <h2>Ideas go here!</h2>
+    <h2>Hello, {[props.name, props.title]}!</h2>
   )
 }
 
